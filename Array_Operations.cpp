@@ -8,7 +8,8 @@ void search(int *ptr);
 void sort(int *ptr);
 void left_shift(int *ptr);
 void right_shift(int *ptr);
-int average(int *ptr);
+double average(int *ptr);
+
 
 int main()
 {
@@ -33,3 +34,15 @@ int main()
     return 0;
 }
 //Write the functions here, one by one.
+
+double average(int *ptr){
+    double avg = 0;
+    int sum = 0;
+    int n = N;
+    while(n--){
+        sum += *ptr;
+        ptr++;
+    }
+    avg = (double)sum/N;
+    return avg;
+}
