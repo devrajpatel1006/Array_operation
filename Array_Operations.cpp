@@ -10,6 +10,7 @@ void left_shift(int *ptr);
 void right_shift(int *ptr);
 int average(int *ptr);
 
+
 int main()
 {
     int array[N]={6,7,8,4,3,2,1,9,8,10};
@@ -33,3 +34,15 @@ int main()
     return 0;
 }
 //Write the functions here, one by one.
+
+int average(int *ptr){
+    int avg = 0;
+    int sum = 0;
+    int n = N;
+    while(n--){
+        sum += *ptr;
+        ptr++;
+    }
+    avg = sum/N;
+    return avg;
+}
